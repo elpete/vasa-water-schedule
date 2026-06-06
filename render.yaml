@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: vasa-water-schedule
+    runtime: node
+    plan: free
+    repo: https://github.com/elpete/vasa-water-schedule
+    branch: main
+    autoDeploy: false
+    buildCommand: npm ci
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20

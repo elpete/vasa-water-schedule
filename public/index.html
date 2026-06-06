@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VASA Class Schedules</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">VASA schedule viewer</p>
+          <h1>Classes near you</h1>
+        </div>
+        <form id="search-form" class="controls">
+          <label>
+            ZIP
+            <input id="zip" name="zip" inputmode="numeric" pattern="[0-9]{5}" placeholder="80219" required />
+          </label>
+          <label>
+            Date
+            <input id="date" name="date" type="date" required />
+          </label>
+          <label>
+            Miles
+            <select id="miles" name="miles">
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="25" selected>25</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+          </label>
+          <label>
+            Activity
+            <select id="activity" name="activity">
+              <option value="water" selected>Water</option>
+              <option value="all">All</option>
+            </select>
+          </label>
+          <button type="submit">Search</button>
+        </form>
+      </header>
+
+      <section id="status" class="status">Enter a ZIP code and date to load nearby schedules.</section>
+      <section id="summary" class="summary" hidden></section>
+      <section id="results" class="results"></section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

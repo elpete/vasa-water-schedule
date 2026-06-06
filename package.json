@@ -1,0 +1,22 @@
+{
+  "name": "i-want-to-make-a-tool",
+  "version": "1.0.0",
+  "description": "Single-page VASA class schedule aggregator by ZIP and date.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --check server.js && node --check public/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2"
+  }
+}
