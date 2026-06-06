@@ -12,16 +12,16 @@ This app is ready for Render as a Node web service.
    - Build command: `npm ci`
    - Start command: `npm start`
    - Auto-Deploy: off, if you want GitHub Actions to be the deploy trigger
-4. After the service exists, open its Settings tab and copy the Deploy Hook URL.
+4. Note the service ID from the service URL or the Render API.
 
 ## GitHub setup
 
 1. Open the GitHub repository settings.
 2. Go to Secrets and variables, then Actions.
-3. Add a repository secret named `RENDER_DEPLOY_HOOK_URL`.
-4. Paste the Render Deploy Hook URL as the secret value.
+3. Add a repository secret named `RENDER_API_KEY`.
+4. Add a repository secret named `RENDER_SERVICE_ID`.
 
-Pushing to `main` will now run `.github/workflows/deploy-render.yml`, install dependencies, run syntax checks, and trigger a Render deploy.
+Pushing to `main` will now run `.github/workflows/deploy-render.yml`, install dependencies, run syntax checks, and trigger a Render deploy through the Render API.
 
 ## Custom domain
 
